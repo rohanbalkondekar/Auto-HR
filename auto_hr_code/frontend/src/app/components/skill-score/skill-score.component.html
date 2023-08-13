@@ -1,0 +1,22 @@
+
+  <div class="container">
+    <div class="title" [ngClass]="isBold ? 'bold': 'normal'">{{title}}</div>
+    <circle-progress
+    [percent]="score"
+    [radius]="50"
+    [outerStrokeWidth]="10"
+    [innerStrokeWidth]="50"
+    [outerStrokeColor]="color"
+    [innerStrokeColor]="color"
+    [animation]="true"
+    [space]="19"
+    [showImage]="false"
+    [animationDuration]="300"
+    [showSubtitle]="false"
+    [titleFontSize]="'10'"
+    [title]="innerTitle"
+    [showUnits]="false"
+    [titleColor]="'#FFFFFF'"
+    [clockwise]="false"
+  ></circle-progress>
+  </div>

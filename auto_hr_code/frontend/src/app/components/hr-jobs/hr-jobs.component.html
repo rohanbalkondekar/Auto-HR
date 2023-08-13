@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="top">
+        <div class="title">Jobs ({{jobList.length}})</div>
+        <div class="post-job">
+            <button mat-raised-button color="primary" (click)="openPostJob()">Post New Job</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="primary" (click)="openCandidateDialog()">Send Email To Candidates</button>
+
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="job-list">
+           <app-jobs class="job-list" [jobList]="jobList" [isHr]="isHr"></app-jobs>
+        </div>
+    </div>
+</div>

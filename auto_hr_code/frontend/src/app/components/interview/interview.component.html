@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div class="wrapper">
+        <div class="logo">
+            <img src="../../../assets/logo/logo.svg" alt="">
+        </div>
+        <div class="btn">
+            <button mat-raised-button color="primary" (click)="evaluateInterview()">Back to Jobs</button>
+        </div>
+    </div>
+
+
+    <div class="chat-wrapper" id="chat-div">
+        <div class="chat-item" [ngClass]="item.role == 'user' ? 'bg-grey': null " *ngFor="let item of questions_array">
+            <div class="img">
+                <img *ngIf="item.role == 'user'" src="../../../assets/images/user.jpg" alt="">
+                <img *ngIf="item.role == 'assistant'" src="../../../assets/images/bot.png" alt="">
+            </div>
+            <div class="txt" *ngIf="item.role == 'user' || item.role == 'assistant'">
+            {{item.content}}    
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="chat-input-container">
+            <input type="text" placeholder="Type your message..." id="que" name="que" [(ngModel)]="question" (keydown.enter)="send()" />
+                <!-- <i class="fa-regular fa-paper-plane" (click)="send()"></i> -->
+                <button mat-stroked-button (click)="send()">Send</button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="wrapper">
+    <table *ngIf="candidateList.length !== 0">
+      <tr>
+        <th>Candidate Name</th>
+        <th>Interview Status</th>
+        <th>Reason</th>
+      </tr>
+      <tr *ngFor="let item of candidateList">
+        <td>{{item?.name}}</td>
+        <td>
+            <span [ngClass]="item.status === 'Passed' ? 'pass': 'fail'">{{item.status}}</span>
+        </td>
+        <td> {{item.reason}}</td>
+      </tr>
+      
+     
+      
+    </table>
+
+    <div *ngIf="candidateList.length == 0" class="note">No Records Found.</div>
+  </div>
+
+  <div class="footer">
+    <div class="btn">
+      <button mat-stroked-button color="primary" mat-dialog-close>Close</button>
+    </div>
+  </div>
+</div>

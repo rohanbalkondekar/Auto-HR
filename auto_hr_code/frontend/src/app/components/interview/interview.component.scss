@@ -1,0 +1,98 @@
+.container {
+    // padding: 1%;
+    height: 100%;
+    overflow: hidden;
+  
+    .wrapper{
+        padding: 1%;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+        display: flex;
+
+        .logo {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          width: 50%;
+        }
+
+        .btn{
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            padding-right: 3em;
+        }
+    }
+
+    .chat-wrapper{
+        height: 82%;
+        border: 1px solid;
+        overflow-y: scroll;
+        padding: 0 15%;
+
+        .chat-item{
+            display: flex;
+            align-items: center;
+            margin: 1em 0;
+            .img{
+                padding: 1em;
+                img{
+                    width: 30px;
+                    mix-blend-mode: color-burn;
+                }
+            }
+    
+            .txt{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+
+        .bg-grey{
+            background-color: #e0e0e070;
+        }
+
+    }
+  
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        padding: 8px;
+        // box-shadow: 0px 0px 20px rgba(22, 46, 86, 0.25);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .chat-input-container {
+            margin-top: 0.5%;
+            display: flex;
+            align-items: center;
+            width: 70%;
+            justify-content: space-between;
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            // margin-left: 14%;
+            // border:1px solid #E2E7EF;
+            border: 1px solid lightgray;
+          }
+
+          input[type="text"] {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+    }
+  }
+  

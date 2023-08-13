@@ -1,0 +1,32 @@
+.container{
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title{
+            font-size: 36px;
+            font-weight: 400;
+        }
+
+        .post-job{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .wrapper{
+        margin-top: 1%;
+        .job-list{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            // justify-content: space-between;
+        }
+    }
+}

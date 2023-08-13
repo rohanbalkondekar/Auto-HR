@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="top">
+        <div class="title">Latest Jobs ({{jobList?.length}})</div>
+        <div class="post-job">
+            <img src="../../../assets/logo/filter.svg" alt="">
+            <!-- <button mat-raised-button color="primary">
+            </button> -->
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="job-list">
+           <app-jobs class="job-list" [jobList]="jobList" [isHr]="isHr"></app-jobs>
+        </div>
+    </div>
+</div>

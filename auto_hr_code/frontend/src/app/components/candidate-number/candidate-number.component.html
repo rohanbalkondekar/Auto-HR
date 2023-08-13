@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="title">Enter Number of Eligible Candidates</div>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter Number</mat-label>
+            <input matInput type="number" placeholder="Enter Number" [(ngModel)]="candidateNumber">
+          </mat-form-field>
+    </div>
+
+
+          <div class="footer">
+            <div class="btn">
+                <button mat-stroked-button color="primary" mat-dialog-close>Cancel</button>
+                &nbsp;&nbsp;&nbsp;
+                <button mat-raised-button color="primary" (click)="sendMail()" [disabled]="!candidateNumber">Send Mail</button>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,119 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .parent {
+    border: 1px solid #cac5cd;
+    border-radius: 8px;
+    padding: 3%;
+    width: 45%;
+
+    .headline {
+      font-size: 45px;
+      font-weight: 400;
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    }
+
+    .choice {
+      display: flex;
+      align-items: center;
+      margin-top: 8%;
+
+      .hr-section {
+        border: 1px solid #ded8e1;
+        border-radius: 8px;
+        padding: 2%;
+        width: 50%;
+
+        .profile-section {
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .i-am {
+          font-size: 14px;
+          margin-top: 15%;
+          line-height: 40px;
+        }
+
+        .hiring {
+          font-size: 28px;
+          font-weight: 500;
+        }
+      }
+
+      .candidate-section {
+        border: 1px solid #ded8e1;
+        border-radius: 8px;
+        padding: 2%;
+        width: 50%;
+
+        .profile-section {
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .i-am {
+          font-size: 14px;
+          margin-top: 15%;
+          line-height: 40px;
+        }
+
+        .hiring {
+          font-size: 28px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  ::ng-deep {
+    mat-radio-group {
+      display: flex;
+      width: 100%;
+      gap: 5%;
+    }
+
+    .mat-mdc-radio-button
+      .mdc-radio
+      .mdc-radio__native-control:enabled:not(:checked)
+      + .mdc-radio__background
+      .mdc-radio__outer-circle {
+      border-color: #6750a4;
+    }
+
+    .mat-mdc-radio-button
+      .mdc-radio
+      .mdc-radio__native-control:enabled
+      + .mdc-radio__background
+      .mdc-radio__inner-circle {
+      border-color: #6750a4;
+    }
+
+    .mat-mdc-radio-button.mat-mdc-radio-checked .mdc-radio__background::before {
+      background-color: #6750a4;
+    }
+    .mat-mdc-radio-button
+      .mdc-radio
+      .mdc-radio__native-control:enabled:checked
+      + .mdc-radio__background
+      .mdc-radio__outer-circle {
+      border-color: #6750a4;
+    }
+  }
+}

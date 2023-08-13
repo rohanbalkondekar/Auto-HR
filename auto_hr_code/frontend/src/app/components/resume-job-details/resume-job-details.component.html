@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="top">
+      <div class="bread"><span>Jobs</span>&nbsp;&nbsp;/ Job Detail</div>
+    </div>
+  
+    <div class="wrapper">
+      <div class="left">
+  
+        <div class="title">{{jobDetails?.Job}}</div>
+  
+        <div class="description">
+          {{jobDetails?.Job_Description}}
+        </div>
+  
+        <div class="about">About Company</div>
+  
+        <div class="description">
+          {{jobDetails?.About_Company}}
+        </div>
+
+        <div class="about">Job Summary</div>
+  
+        <div class="description">
+            {{jobDetails?.Job_Summary}}
+        </div>
+
+      </div>
+  
+      <div class="right">
+        <div class="title">Candidate Report</div>
+  
+        <div class="info-section">
+            <div class="name-wrapper">
+                <div class="name">Name</div>
+                <div class="nm">{{resumeDetail?.Candidate_Name}}</div>
+            </div>
+
+            <div class="name-wrapper">
+                <div class="name">Position</div>
+                <div class="nm">{{jobDetails?.Job}}</div>
+            </div>
+
+        </div>
+
+        <div class="info-section">
+            <div class="name-wrapper">
+                <div class="name">Email</div>
+                <div class="nm">{{resumeDetail?.Email}}</div>
+            </div>
+        </div>
+
+
+        <div class="score-wrapper">
+            <app-skill-score [title]="'Total Score'" [isBold]="'true'" [color]="'#198A48'" [score]="getScore(resumeDetail?.Final_Score) / 10" [innerTitle]="getScore(resumeDetail?.Final_Score) +'/ 10'">
+
+            </app-skill-score>
+            <app-skill-score [title]="'Resume Score'" [isBold]="'false'" [color]="'#198A48'" [score]="getScore(resumeDetail?.Resume_Score) / 10" [innerTitle]="getScore(resumeDetail?.Resume_Score)+' / 10'"></app-skill-score>
+            <app-skill-score [title]="'Compatibility with Job'" [isBold]="'false'" [color]="'#198A48'" [score]="getScore(resumeDetail?.Candidate_Compatibility_with_Job) / 10" [innerTitle]="getScore(resumeDetail?.Candidate_Compatibility_with_Job)+'/ 10'"></app-skill-score>
+            <!-- <app-skill-score [title]="'Machine Learning'" [isBold]="'false'" [color]="'#B3261E'" [score]="4 / 10" [innerTitle]="'4 / 10'"></app-skill-score> -->
+
+
+        </div>
+
+
+
+        <div class="about">Skills Remarks</div>
+  
+        <div class="description">
+          <ol>
+            <li *ngFor="let item of resumeDetail?.Five_Impressive_Qualities_Irrespective_of_Job_Description"> {{item}}</li>
+          </ol>
+        </div>
+  
+        
+  
+        
+  
+      
+  
+        
+
+      </div>
+    </div>
+  
+    <div class="footer">
+      <div class="btn">
+        <button mat-stroked-button color="primary">Cancel</button>
+        &nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="backtoJobList()">Go To Jobs</button>
+      </div>
+    </div>
+  
+  </div>
+  

@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="header">
+        <img src="../../../assets/logo/arrow_back.svg" alt="" (click)="closeSideNav()">
+        <span>Upload Resume</span>
+    </div>
+
+    <div class="details">
+
+        <div class="title">Name</div>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" [(ngModel)]="name">
+          </mat-form-field>
+
+
+          <div class="title">Email</div>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" [(ngModel)]="email">
+          </mat-form-field>
+
+
+          <div class="title">Contact</div>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Contact</mat-label>
+            <input matInput placeholder="Contact" [(ngModel)]="contact">
+          </mat-form-field>
+
+          <div class="title">Upload Resume</div>
+
+          <div class="upload-section">
+            <p *ngIf="!file"> <button mat-raised-button color="primary" (click)="openFileChooser()">
+                <img src="../../../assets/logo/upload_document.svg" alt="">
+                &nbsp;
+                Upload Document</button>
+
+                <input id="file-chooser-resume" (change)="onFileSelect($event)" type="file" name="" style="display: none;">
+            </p> 
+            <!-- <p>Or drop a file</p> -->
+
+
+            <div class="preview" *ngIf="file">
+                <img src="../../../assets/logo/text_snippet.svg" alt="">
+                <div>
+                    {{file?.name}}  
+                    <span (click)="removeFile()"><img src="../../../assets/logo/close-file.svg" alt=""></span>
+                </div>
+            </div>
+
+
+          </div>
+
+          <div class="or">OR</div>
+
+          <div class="title mt-2em">Write Resume</div>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Write Resume</mat-label>
+            <textarea rows="5" matInput [(ngModel)]="writeAResume"></textarea>
+          </mat-form-field>
+    </div>
+
+    <div class="footer">
+        <div class="btn">
+            <button mat-stroked-button color="primary" (click)="closeSideNav()">Cancel</button>
+            &nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="primary" [disabled]="!validateForm()" (click)="openJobPreview()">Upload</button>
+        </div>
+    </div>
+</div>

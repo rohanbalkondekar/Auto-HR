@@ -1,0 +1,22 @@
+<div class="job" *ngFor="let job of jobList">
+    <div class="location">
+        <span>INDIA</span> <span>PUNE</span>  
+    </div>
+    <div class="title" [ngClass]="!isHr ? 'cursor-pointer' : null " (click)="openJobDetails()">
+        {{job?.Job}}
+    </div>
+    <div class="description">
+        {{job?.Job_Summary}}
+    </div>
+
+    <div class="area">
+        <div class="tech">
+            <span>Business area: </span> Technology
+        </div>
+
+        <div class="apply">
+            <button mat-raised-button color="primary" *ngIf="!isHr" (click)="openApplySideNav(job)">Apply</button>
+            <button mat-raised-button color="primary" *ngIf="isHr" (click)="openViewApplicants(job)">View Applicants</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+mat-sidenav-container {
+  .mat-drawer-content {
+    .container {
+      height: 100%;
+      .parent {
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        .left {
+          height: 100%;
+          width: 5%;
+          .menu {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: column;
+
+            .icon {
+                cursor: pointer;
+                margin: 10px 0;
+            }
+          }
+        }
+
+        .right {
+          background-color: #f2f4f8;
+          height: max-content;
+          width: 95%;
+          padding: 1%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.overlay{
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    span{
+        color: #fff;
+        font-size: 16px;
+        margin-top: 1em;
+    }
+
+    .loader {
+        border: 5px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 5px solid darkslategray;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+      }
+      
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+}

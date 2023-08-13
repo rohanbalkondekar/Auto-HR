@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 1%;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+  }
+
+  .profile-logo {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+    gap: 2%;
+
+    .menu, .notification{
+        cursor: pointer;
+    }
+
+    .user{
+        .usrname{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            background: #DBE4F0;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+  }
+}

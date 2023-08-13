@@ -1,0 +1,109 @@
+.container{
+    height: 100%;
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title{
+            font-size: 14px;
+            font-weight: 400;
+            span{
+                color: #6750A4;
+            }
+        }
+
+        .post-job{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+    }
+
+    .wrapper{
+        margin-top: 1%;
+        display: flex;
+        gap: 16px;
+        height: 100%;
+
+        .left{
+            width: 50%;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            height: calc(100% - 18em);
+            overflow-y: scroll;
+
+            .title{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 3em;
+            }
+
+            .description{
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .about{
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 5em;
+                color: #363E45;
+            }
+        }
+
+        .right{
+            width: 50%;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            height: calc(100% - 18em);
+            overflow-y: scroll;
+
+            .insert{
+                font-size: 14px;
+                font-weight: 500;
+                color: #6750A4;
+                cursor: pointer;
+            }
+
+            .title{
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 3em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .description{
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .about{
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 5em;
+                color: #363E45;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        border-top: 1px solid #e8def8;
+        padding: 1%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+      }
+}

@@ -1,0 +1,137 @@
+.container {
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .bread {
+      font-size: 14px;
+      font-weight: 400;
+      span {
+        color: #6750a4;
+      }
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 400;
+      span {
+        color: #6750a4;
+      }
+    }
+
+    .sub-title {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 1em;
+    }
+
+    .post-job {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+  }
+
+  .wrapper {
+    margin-top: 1%;
+    display: flex;
+    gap: 16px;
+
+    .left {
+      width: 50%;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 16px;
+
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 3em;
+      }
+
+      .sub-title {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 1em;
+      }
+
+      .description {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .about {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 5em;
+        color: #363e45;
+      }
+    }
+
+    .right {
+      width: 50%;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 16px;
+
+      .info-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2em;
+        width: 100%;
+
+        .name-wrapper {
+          width: 50%;
+          .name {
+            font-size: 12px;
+            font-weight: 400;
+            color: #71777b;
+          }
+
+          .nm {
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .score-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .description {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .about {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 5em;
+        color: #363e45;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-top: 1px solid #e8def8;
+    padding: 1%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+
+}
+}

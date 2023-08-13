@@ -1,0 +1,15 @@
+<div class="parent">
+    <span *ngIf="!isHrJobLoaded">
+        Job Posted Successfully.
+    </span>
+
+    <span *ngIf="isHrJobLoaded">
+        Applied for Job Successfully.
+    </span>
+
+
+
+    <span>
+        <img src="../../../assets/logo/close.svg" alt="" (click)="dismiss()">
+    </span>
+</div>
